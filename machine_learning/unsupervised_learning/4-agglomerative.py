@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Module for Agglomerative Hierarchical Clustering."""
-from sklearn import cluster, metrics
+from sklearn import cluster
+from sklearn import metrics
 
 Apply_PCA = __import__('1-pca').Apply_PCA
 
