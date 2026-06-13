@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Module for Agglomerative Hierarchical Clustering."""
 from sklearn import cluster, metrics
 
 Apply_PCA = __import__('1-pca').Apply_PCA
@@ -6,6 +7,7 @@ Apply_PCA = __import__('1-pca').Apply_PCA
 
 def Agglomerative_Clustering(X, n_clusters, random_state,
                               n_components, use_pca_data=True):
+    """Perform agglomerative clustering with optional PCA reduction."""
     if use_pca_data:
         X_used, _ = Apply_PCA(
             X,

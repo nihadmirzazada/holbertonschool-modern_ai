@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
-"""Task 2: Clustering with K-Means using Scikit-learn."""
-
+"""Module for K-Means clustering using Scikit-learn."""
 from sklearn import cluster
 
 
 def K_Means(X, n_clusters, random_state):
-    """
-    Creates and fits a K-Means clustering model on tabular data.
-
-    Args:
-        X (numpy.ndarray): Tabular data of shape (n_samples, n_features)
-        n_clusters (int): Number of clusters to find
-        random_state (int): Random seed for reproducibility
-
-    Returns:
-        sklearn.cluster.KMeans: K-Means instance fitted on the input data.
-    """
-    model = cluster.KMeans(n_clusters=n_clusters, random_state=random_state)
+    """Create and fit a K-Means clustering model."""
+    model = cluster.KMeans(
+        n_clusters=n_clusters,
+        random_state=random_state
+    )
     model.fit(X)
     return model
